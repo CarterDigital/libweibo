@@ -11,7 +11,7 @@ if (isset($_REQUEST['code'])) {
 	$keys['code'] = $_REQUEST['code'];
 	$keys['redirect_uri'] = WB_CALLBACK_URL;
 	try {
-		$token = $o->getAccessToken( 'code', $keys ) ;
+		$token = $o->getAccessToken( $keys ) ;
 	} catch (OAuthException $e) {
 	}
 }
